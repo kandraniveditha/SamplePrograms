@@ -1,0 +1,123 @@
+Java Important Programs
+------------------------
+
+In Fibonacci Series next number is the sum of previous two numbers for example 0,1,1,2,3,5,8,13,21,34,55,etc.
+
+1)Fibonacci Series without using recursion.
+ Class FibonacciSeries{
+  public static void main(String args[])
+  {
+   int n1=0,n2=1,n3,i,count=10;
+   System.out.println(n1+""+n2); //printing 0 and 1
+   for(i=2;i<count;i++) //loop starts from 2 because 0 and 1 are already printed
+    {
+       n3=n1+n2;
+       System.out.println(""+n3);
+       n1=n2;
+       n2=n3;
+    }
+  }
+}
+
+Output: 0 1 1 2 3 5 8 13 21 34
+
+2)Fibonacci Series using recursion in java
+Class FibonacciSeriesRec{
+ static int n1=0,n2=1,n3=0;
+  static void printFibonacci(int count)
+  {
+    if(count>0)
+    {
+   n3=n1+n2;
+   n1=n2;
+   n2=n3;
+ System.out.println(n1+""n2); //printing 0 and 1
+ printFibonacci(count-2);//n-2 because 2 numbers are already printed
+
+Output: 0 1 1 2 3 5 8 13 21 34
+
+3)Factorial Program
+  Factorial of n is the product of all positive descending integers.
+  example 4!=4*3*2*1=24
+
+Factorial Program using loop
+Class Factorial{
+public static void main(String args[])
+{
+  int i,fact=1;
+  int number=5; //it is number to calculate factorial
+  for(i=1;i<number;i++)
+   {
+     fact=fact*i;
+   }
+  System.out.println("Factorial of" +number+ "is:" +fact);
+
+}
+}
+
+output:Factorial of 5 is : 120
+
+4)Factorial Program using recursion in java
+class Factorial{
+static int factorial(int n)
+{
+  if(n==0)
+  return 1;
+else
+ return(n*factorial(n-1));
+}
+public static void main(String args[])
+{
+  int i,fact=1;
+  int number=4; 
+  fact=factorial(number);
+  System.out.println("Factorial of " +number+ "is:" +fact);
+}
+}
+
+5)Swap two numbers using temp varables.
+class SwapEx{
+public static void main(String args[]){
+int x=10;
+int y=20;
+System.out.println("Before swapping: "x + "\t" + y +"\t");
+temp=x;
+x=y;
+y=temp;
+System.out.println("After Swapping: " x +"\t" + y +"\t");
+}}
+
+6)Swap two numbers using temp varables.
+class Swap{
+public static void main(String args[]){
+int x=10;
+int y=20;
+System.ot.println("before Swapping: "x + "\t" + y +"\t");
+x=x+y;
+y=x-y;
+x=x-y;
+System.out.println("after swapping: "x + "\t" + y +"\t");
+}
+}
+
+7)Palindrome Program
+class Palindrome{
+public static void main(String args[]){
+int r,sum=0,temp;
+int n=454; //it is the number variable to be checked for palindrome
+temp=n;
+while(n>0){
+r=n%10;
+sum=(sum*10)+r;
+n=n/10;
+}
+if(temp==sum)
+System.ot.println("Palindrome number");
+else
+System.ot.println("Not a Palindrome number");
+}}
+
+
+
+
+
